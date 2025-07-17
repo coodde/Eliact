@@ -1,0 +1,36 @@
+{
+  "name": "coodde/eliact",
+  "description": "AI-powered structured input parser for PHP. Extract structured data (names, emails, dates, etc) from natural language using LLMs like OpenAI.",
+  "type": "library",
+  "keywords": ["ai", "llm", "parser", "form", "structure", "openai", "php", "eliact"],
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Svyatoslav Ryzhok",
+      "email": "info@coodde.com",
+      "homepage": "https://github.com/coodde"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^7.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "Coodde\\Eliact\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "phpunit/phpunit": "^10.0"
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
