@@ -52,11 +52,20 @@ composer require coodde/eliact
 ```
 
 ## ✅ Supported Types
-- string
-- email
-- date (parsed to Y-m-d)
-- int
-- float
 - bool
+- country-code
+- credit-card
+- date (parsed to Y-m-d)
+- datetime
+- email
+- float
+- int
+- month
 - phone
+- safe-string
+- string
+- time
 - url
+- uuid
+- year
+- zip-code
