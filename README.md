@@ -51,7 +51,21 @@ $eliact = new Eliact($cached);
 composer require coodde/eliact
 ```
 
-## ✅ Supported Types
+## ⌨️ Supported Input Types
+- Text
+- URL / HTML
+- Image
+- Audio
+
+## 🌐 Supported Providers
+- OpenAI: gpt-4o, gpt-4, gpt-3.5-turbo
+- Anthropic: claude-3-opus, claude-3-sonnet, claude-3-haiku
+- Google: gemini-1.5-pro, gemini-1.5-flash
+- DeepSeek: deepseek-chat, deepseek-vl
+- Mistral: mistral-7b, mixtral-8x7b
+- Ollama: llama3, gemma, llava, bakllava
+
+## ✅ Supported Data Types
 - bool
 - country-code
 - credit-card
