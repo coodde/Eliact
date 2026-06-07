@@ -5,7 +5,7 @@ namespace Coodde\Eliact\Factory;
 use Coodde\Eliact\Contracts\AiDriverInterface;
 use Coodde\Eliact\Drivers\OpenAiDriver;
 use Coodde\Eliact\Drivers\DeepSeekDriver;
-use Coodde\Eliact\Drivers\ClaudeDriver;
+use Coodde\Eliact\Drivers\AnthropicDriver;
 use Coodde\Eliact\Drivers\MistralDriver;
 use Coodde\Eliact\Drivers\OllamaDriver;
 use InvalidArgumentException;
@@ -17,9 +17,9 @@ class DriverFactory
         return match (strtolower($provider)) {
             'openai' => new OpenAiDriver($apiKey, $config['model'] ?? 'gpt-3.5-turbo'),
             'deepseek' => new DeepSeekDriver($apiKey, $config['model'] ?? 'deepseek-chat'),
-            'claude' => new ClaudeDriver($apiKey, $config['model'] ?? 'claude-3-sonnet'),
+            'claude' => new AnthropicDriver($apiKey, $config['model'] ?? 'claude-3-sonnet'),
             'mistral' => new MistralDriver($apiKey, $config['model'] ?? 'mistral-7b-instruct'),
-            'ollama' => new OllamaDriver($apiKey, $config['model'] ?? 'llama2'),
+            'ollama' => new OllamaDriver($config['model'] ?? 'llama3', $config['url'] ?? OllamaDriver::DEFAULT_URL),
             default => throw new InvalidArgumentException("Unsupported AI provider: $provider")
         };
     }
